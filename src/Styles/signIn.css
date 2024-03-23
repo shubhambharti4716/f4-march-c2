@@ -1,0 +1,120 @@
+:root{
+    --welcomeText:#333333;
+    --blue:#564FF2;
+    --skyblue:#5BF7DB;
+}
+.signIn-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .main-background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .line{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    height: 150%;
+    width: 100%;
+    transform: skewY(20deg);
+    border-top: 8px solid var(--skyblue);
+}
+.form{
+    height: fit-content;
+    width: 380px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 30px 18px 30px;
+    color: var(--welcomeText);
+    z-index: 1;
+    
+}
+.form>p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.form>h1{
+    margin-top: -5px;
+    margin-bottom: 12px;
+}
+form label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.form input{
+    outline: none;
+    padding-inline: 4px;
+    font-size: 14px;
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid #DEDEDE;
+    margin-block: 5px;
+}
+.form button{
+    width: 103%;
+    margin-top: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 800;
+    line-height: 3;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
+}
+.form button:hover{
+    background: linear-gradient(180deg, #463EEA 0%, #625BF7 100%);
+}
+.invalid{
+    text-align: center;
+    font-size: 16px;
+    color: red;
+    font-weight: 600;
+}
+.reset-password{
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+.signUp-text{
+    z-index: 1;
+}
+.signUp-text span{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+    .form{
+        Width:75%;
+        Height: 340px;
+    }
+    .form>h1{
+        font-size: 20px;
+    }
+    .form>p{
+        font-size: 15px;
+    }
+    .line{
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: skewY(20deg); 
+        /* transform-origin: top left; */
+    }
+}
